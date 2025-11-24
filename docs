@@ -1,0 +1,68 @@
+# 📚 EcoChronos Documentation
+
+## 🛠 System Overview
+EcoChronos is a mythology-powered environmental game that blends storytelling, science, and real-world action.  
+This documentation explains the technical design, architecture, datasets, and workflows.
+
+---
+
+## 🏗 Architecture
+**Flow:**  
+Game Engine → API → Database → Proof-of-Action Storage → Rewards Engine → (Optional) Blockchain
+
+**Components:**
+- **Frontend:** Unity/Godot/React
+- **Backend:** Node.js + Express
+- **Database:** Firebase/Supabase
+- **Storage:** AWS S3 for photo proof
+- **On-chain (future):** Polygon / Celo / Base
+
+---
+
+## 🔌 APIs & Endpoints
+- `POST /api/upload-proof` → Uploads photo evidence of real-world action  
+- `GET /api/rewards` → Fetches XP, badges, and achievements  
+- `GET /api/lessons` → Serves micro-learning content  
+- `POST /api/verify-action` → Validates proof-of-action submissions  
+
+---
+
+## 🌍 Datasets & References
+- UNEP Nature-based Solutions data  
+- GBM (Green Belt Movement) datasets  
+- Climate/forest GIS layers  
+- Plastic pollution statistics (UNEP, WWF)  
+
+---
+
+## 🎮 User Flow
+1. Player starts a mission in-game.  
+2. Learns a micro-fact via popup.  
+3. Completes a real-world action (e.g., tree planting).  
+4. Uploads proof (photo/location).  
+5. Backend verifies → rewards issued.  
+6. Optional on-chain minting for Proof-of-Action.  
+
+---
+
+## ⚙️ Backend Workflows
+- **Verification Logic:** Checks photo metadata, location, and partner QR codes.  
+- **Reward Calculation:** Assigns XP, badges, or tokens based on action type.  
+- **Time Meter Updates:** Adjusts biome health in real-time.  
+
+---
+
+## 🚀 MVP Features
+- Forest biome with Time Meter  
+- Upload system demo  
+- Basic reward system  
+- CTA button linking to environmental courses  
+
+---
+
+## 🛠 Setup Instructions
+### Backend
+```bash
+cd backend
+npm install
+npm run dev
